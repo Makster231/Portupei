@@ -1,0 +1,93 @@
+.btn {
+  margin-left: 20px;
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border: 1px solid $white;
+  width: 260px;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  transition: 0.4s ease;
+  font-family: "Open Sans", sans-serif !important;
+
+  &:hover {
+    background-color: $purple;
+    color: $white;
+    border-color: $purple;
+  }
+
+  // &:active {
+  //   transition: 0s;
+  //   background-color: $white;
+  //   color: $purple;
+  //   border-color: $purple;
+  // }
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &-dark {
+    background-color: #f3f3f3;
+    color: $black;
+    width: 310px;
+    font-size: 18px;
+    margin-left: 0;
+    border: 0;
+
+    &:active,
+    &.js_active {
+      background-color: $purple;
+      color: $white;
+      border-color: $purple;
+    }
+  }
+
+  &-fill {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(141, 84, 233);
+    background: -moz-linear-gradient(
+      top,
+      rgba(141, 84, 233, 1) 0%,
+      rgba(125, 185, 232, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(141, 84, 233, 1) 0%,
+      rgba(125, 185, 232, 1) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(141, 84, 233, 1) 0%,
+      rgba(125, 185, 232, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d54e9', endColorstr='#7db9e8',GradientType=0 );
+
+    &:hover {
+      background: rgb(141, 84, 233);
+      background: -moz-linear-gradient(
+        left,
+        rgba(141, 84, 233, 1) 0%,
+        rgba(125, 185, 232, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        left,
+        rgba(141, 84, 233, 1) 0%,
+        rgba(125, 185, 232, 1) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(141, 84, 233, 1) 0%,
+        rgba(125, 185, 232, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d54e9', endColorstr='#7db9e8',GradientType=1 );
+    }
+  }
+}

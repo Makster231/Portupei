@@ -1,0 +1,17 @@
+﻿.wrapper-page {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    width: 100%;
+  }
+
+  .main-page {
+    flex: 1 0 auto;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+  overflow-x: hidden;
+}

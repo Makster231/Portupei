@@ -1,0 +1,111 @@
+.entry {
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    height: 100%;
+  }
+  &::after {
+    background: url(../../images/bg.png) 50% 10% no-repeat;
+  }
+  &::before {
+    background: url(../../images/entry/bg.png) 50% 0% no-repeat;
+    opacity: 0.55;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 125px;
+    padding-top: 90px;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      bottom: -45px;
+      width: 50%;
+    }
+
+    &:before {
+      left: 0;
+      background: url(../../images/entry/girl_1.png) center left no-repeat;
+    }
+
+    &:after {
+      right: 0;
+      background: url(../../images/entry/girl_2.png) center right no-repeat;
+    }
+  }
+
+  &_header {
+    margin-bottom: 44px;
+    h4 {
+      color: $white;
+      font-size: 34px;
+      margin-bottom: 15px;
+      font-weight: 300;
+    }
+
+    h1 {
+      font-size: 82px;
+      color: $white;
+      font-weight: bold;
+      margin-bottom: 28px;
+      line-height: 1;
+    }
+
+    hr {
+      display: block;
+      width: 460px;
+      margin: 0 auto;
+      outline: 0;
+      border: 0;
+      height: 4px;
+      background-color: $white;
+    }
+  }
+
+  &_main {
+    margin-bottom: 24px;
+
+    p {
+      font-size: 24px;
+      color: $white;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+
+      &.text-size--big {
+        font-size: 36px;
+        font-weight: bold;
+
+        span {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+
+  &_footer {
+    width: 560px;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    position: relative;
+  }
+}

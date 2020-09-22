@@ -1,0 +1,62 @@
+.sizes {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background: url(../../images/bg.png) center 80% no-repeat;
+
+  &_container {
+    z-index: 10;
+  }
+
+  &_header {
+    margin-bottom: 14px;
+
+    h2 {
+      width: 100%;
+      color: #1e1e1e;
+      font-weight: bold;
+      font-size: 36px;
+      text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 22px;
+    }
+  }
+
+  &_main {
+    padding: 30px;
+    background-color: $white;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+    table {
+      width: 100%;
+    }
+    tr {
+      color: $black;
+      display: block;
+      font-size: 14px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 30px;
+
+      td {
+        width: 102px;
+        text-align: center;
+      }
+
+      td:first-of-type {
+        width: 25%;
+        text-align: left;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: $grey;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) td:first-of-type,
+      &:nth-of-type(4) td:first-of-type,
+      &:nth-of-type(5) td:first-of-type {
+        font-weight: bold;
+      }
+    }
+  }
+}

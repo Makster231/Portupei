@@ -1,0 +1,17 @@
+.underline-small{
+    position: relative;
+
+    &:after{
+        content: "";
+        width: 90px;
+        height: 4px;
+        background-color: $black;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 45px);
+    }
+}
+
+.js_hidden{
+    display: none !important;
+}
