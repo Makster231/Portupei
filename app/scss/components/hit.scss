@@ -1,35 +1,65 @@
 .hit {
-  padding-top: 50px;
+  padding-top: 40px;
+
+  @media screen and (min-width: 960px) {
+    padding-top: 50px;
+  }
 
   &_header {
-    margin-bottom: 26px;
+    margin-bottom: 22px;
+
+    @media screen and (min-width: 960px) {
+      margin-bottom: 26px;
+    }
 
     h2 {
       width: 100%;
       color: #1e1e1e;
       font-weight: bold;
-      font-size: 36px;
       text-align: center;
       text-transform: uppercase;
-      padding-bottom: 22px;
+      padding-bottom: 16px;
+      font-size: 20px;
+
+      @media screen and (min-width: 640px) {
+        padding-bottom: 18px;
+        font-size: 28px;
+      }
+
+      @media screen and (min-width: 960px) {
+        font-size: 36px;
+        padding-bottom: 22px;
+      }
     }
   }
 
   &_main {
-    width: 920px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     margin-bottom: 25px;
+    width: calc(100% - 30px);
+
+    @media screen and (min-width: 640px) {
+      width: 640px;
+    }
+
+    @media screen and (min-width: 960px) {
+      width: 920px;
+    }
 
     p {
       color: #1e1e1e;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.6;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
 
       &:last-of-type {
         margin-bottom: 0;
+      }
+      @media screen and (min-width: 640px) {
+        margin-bottom: 15px;
+        font-size: 16px;
       }
     }
   }
@@ -37,15 +67,52 @@
   &_footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
     img {
-      width: calc(100vw / 6);
-      height: calc(100vw / 6);
+      width: calc(100vw / 3);
+      height: calc(100vw / 3);
       object-fit: cover;
 
       &:first-of-type,
       &:last-of-type {
-        width: calc(100% / 12);
+        width: calc(100% / 6);
+      }
+      &:nth-of-type(1) {
+        order: 1;
+      }
+      &:nth-of-type(2) {
+        order: 2;
+      }
+      &:nth-of-type(3) {
+        order: 3;
+      }
+      &:nth-of-type(4) {
+        order: 5;
+      }
+      &:nth-of-type(5) {
+        order: 6;
+      }
+      &:nth-of-type(6) {
+        order: 7;
+      }
+      &:nth-of-type(7) {
+        order: 4;
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      flex-wrap: unset;
+
+      img {
+        width: calc(100vw / 6);
+        height: calc(100vw / 6);
+        order: unset !important;
+
+        &:first-of-type,
+        &:last-of-type {
+          width: calc(100% / 12);
+        }
       }
     }
   }

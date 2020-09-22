@@ -15,10 +15,10 @@
     z-index: 5;
     height: 100%;
   }
-  &::after {
+  &:after {
     background: url(../../images/bg.png) 50% 10% no-repeat;
   }
-  &::before {
+  &:before {
     background: url(../../images/entry/bg.png) 50% 0% no-repeat;
     opacity: 0.55;
   }
@@ -30,82 +30,192 @@
     text-align: center;
     position: relative;
     z-index: 10;
-    padding-bottom: 125px;
-    padding-top: 90px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      height: 100%;
-      bottom: -45px;
-      width: 50%;
+    @media (min-width: 640px) {
+      padding-top: 90px;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        width: 50%;
+      }
+
+      &:before {
+        background: url(../../images/entry/girl_1.png) center left no-repeat;
+        left: -65px;
+      }
+
+      &:after {
+        background: url(../../images/entry/girl_2.png) center right no-repeat;
+        right: -55px;
+      }
     }
 
-    &:before {
-      left: 0;
-      background: url(../../images/entry/girl_1.png) center left no-repeat;
-    }
+    @media (min-width: 960px) {
+      padding-bottom: 125px;
 
-    &:after {
-      right: 0;
-      background: url(../../images/entry/girl_2.png) center right no-repeat;
+      &:before,
+      &:after {
+        bottom: -45px;
+      }
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
     }
   }
 
   &_header {
-    margin-bottom: 44px;
+    margin-bottom: 25px;
+    @media (min-width: 640px) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: 960px) {
+      margin-bottom: 44px;
+    }
     h4 {
       color: $white;
-      font-size: 34px;
-      margin-bottom: 15px;
       font-weight: 300;
+      font-size: 18px;
+
+      @media (min-width: 640px) {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: 960px) {
+        font-size: 34px;
+        margin-bottom: 15px;
+      }
     }
 
     h1 {
-      font-size: 82px;
       color: $white;
       font-weight: bold;
-      margin-bottom: 28px;
       line-height: 1;
+      font-size: 48px;
+      margin-bottom: 20px;
+
+      @media (min-width: 640px) {
+        font-size: 68px;
+      }
+
+      @media (min-width: 960px) {
+        margin-bottom: 28px;
+        font-size: 82px;
+      }
     }
 
     hr {
       display: block;
-      width: 460px;
       margin: 0 auto;
       outline: 0;
       border: 0;
       height: 4px;
       background-color: $white;
+      width: 100%;
+
+      @media (min-width: 640px) {
+        width: 350px;
+      }
+
+      @media (min-width: 960px) {
+        width: 460px;
+      }
     }
   }
 
   &_main {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
+
+    @media (min-width: 640px) {
+      margin-bottom: 24px;
+    }
+    @media (min-width: 960px) {
+      margin-bottom: 40px;
+    }
 
     p {
-      font-size: 24px;
       color: $white;
-      margin-bottom: 16px;
       text-transform: uppercase;
+      margin-bottom: 14px;
 
       &.text-size--big {
-        font-size: 36px;
         font-weight: bold;
-
+        font-size: 24px;
         span {
-          font-size: 48px;
+          font-size: 32px;
         }
+
+        @media (min-width: 640px) {
+          font-size: 30px;
+          span {
+            font-size: 40px;
+          }
+        }
+
+        @media (min-width: 960px) {
+          font-size: 36px;
+
+          span {
+            font-size: 48px;
+          }
+        }
+      }
+
+      @media (min-width: 640px) {
+        margin-bottom: 16px;
       }
     }
   }
 
   &_footer {
-    width: 560px;
     display: flex;
-    flex-direction: row;
     z-index: 10;
     position: relative;
+    width: calc(100% - 30px);
+    flex-direction: column;
+
+    .btn {
+      width: 100%;
+      margin-bottom: 15px;
+      margin-left: 0;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: 640px) {
+      width: 460px;
+      flex-direction: row;
+
+      .btn {
+        width: 220px;
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-left: 20px;
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @media (min-width: 960px) {
+      width: 560px;
+      .btn {
+        width: 260px;
+      }
+    }
   }
 }

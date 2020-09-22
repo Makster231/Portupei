@@ -1,0 +1,135 @@
+.popup {
+  width: 640px;
+  padding: 0 !important;
+  overflow: hidden !important;
+
+  @media (min-width: 640px) {
+    height: 350px;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+    }
+  }
+
+  &_media {
+    width: 100%;
+    height: 250px;
+
+    img {
+      height: 100%;
+    }
+
+    @media (min-width: 640px) {
+      width: 50%;
+      height: 100%;
+
+      img {
+        object-position: top;
+        height: unset;
+      }
+    }
+  }
+
+  &_content {
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px 15px;
+
+    @media (min-width: 640px) {
+      padding: 40px 20px 30px;
+      width: 50%;
+    }
+
+    h6 {
+      color: $black;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 15px;
+
+      @media (min-width: 640px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-cost {
+      margin-bottom: 15px;
+
+      @media (min-width: 640px) {
+        margin-bottom: 20px;
+      }
+      p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      strike {
+        color: #8c8c8c;
+        font-size: 24px;
+        margin-right: 22px;
+        width: 50%;
+        text-align: right;
+      }
+
+      strong {
+        color: #b4014e;
+        font-weight: bold;
+        width: 50%;
+        font-size: 30px;
+      }
+    }
+
+    &-size {
+      margin-bottom: 15px;
+      li {
+        font-size: 18px;
+        color: #1e1e1e;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    &-form {
+      width: 100%;
+      label {
+        display: none;
+      }
+
+      .form-group {
+        position: relative;
+      }
+
+      input {
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        transition: 0.4s ease;
+        border-bottom: 1px solid $white;
+        margin-bottom: 15px;
+        color: $black;
+
+        &::placeholder {
+          color: #8c8c8c;
+        }
+
+        &:not(:placeholder-shown),
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid $purple;
+        }
+      }
+    }
+  }
+}

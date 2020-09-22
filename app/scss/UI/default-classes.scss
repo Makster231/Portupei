@@ -1,17 +1,37 @@
-.underline-small{
-    position: relative;
+.underline-small {
+  position: relative;
 
-    &:after{
-        content: "";
-        width: 90px;
-        height: 4px;
-        background-color: $black;
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 45px);
+  &:after {
+    content: "";
+    height: 3px;
+    background-color: $black;
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    left: calc(50% - 30px);
+  }
+
+  @media (min-width: 640px) {
+    &:after {
+      height: 4px;
+      width: 90px;
+      left: calc(50% - 45px);
     }
+  }
 }
 
-.js_hidden{
-    display: none !important;
+.js_hidden {
+  display: none !important;
+}
+.visible_then-md {
+  display: none;
+  @media (max-width: 640px) {
+    display: block;
+  }
+}
+.hidden_then-md {
+  display: block;
+  @media (max-width: 640px) {
+    display: none;
+  }
 }

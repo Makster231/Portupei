@@ -1,0 +1,18 @@
+.fancybox-slide--html .fancybox-close-small {
+  color: $white;
+
+  @media (min-width: 640px) {
+    color: #8c8c8c;
+
+    &:hover {
+      svg {
+        transform: rotate(180deg);
+        transition: 0.4s ease;
+        color: $purple;
+      }
+    }
+  }
+}
+.fancybox-is-open .fancybox-bg {
+  opacity: 0.99 !important;
+}

@@ -20,8 +20,7 @@
 
         $(".js_catalog_main-daily").removeClass("js_hidden");
         $(".js_catalog_main-erotic").addClass("js_hidden");
-      }
-       else {
+      } else {
         catalogCls.btn_daily.removeClass("js_active");
         catalogCls.btn_erotic.addClass("js_active");
 
@@ -51,9 +50,60 @@
     });
   }
 
+  
+
+  function catalogOrder() {
+    $(".js_card-order").click(function () {
+      let $this = $(this);
+      let size = $this
+        .closest(".js_catalog_card")
+        .find(".js_catalog_card-sizes li.js_active")
+        .text();
+
+      let title = $this
+        .closest(".js_catalog_card")
+        .find(".js_catalog_card-title")
+        .text();
+
+      let color = $this
+        .closest(".js_catalog_card")
+        .find(".js_catalog_card-colors li.js_active").length;
+
+      let img = $this
+        .closest(".js_catalog_card")
+        .find(".js_catalog_card-img")
+        .attr("src");
+
+      let cost_old = $this
+        .closest(".js_catalog_card")
+        .find(".js_catalog_card-costs strike")
+        .text();
+
+      let cost_new = $this
+        .closest(".js_catalog_card")
+        .find(".js_catalog_card-costs strong")
+        .text();
+
+      if (size !== "" && color) {
+        $.fancybox.open($("#popup"), {
+          touch: false,
+        });
+      }
+
+      $(".js_popup_media-img")[0].setAttribute("src",img);
+      $(".js_popup-cost p").html(
+        "<strike>" + cost_old + "</strike> <strong>" + cost_new + "</strong>"
+      );
+      $(".js_popup-size li").text(size);
+
+      $(".js_popup-title").text(title);
+    });
+  }
+
   $(() => {
     catalog();
     catalogSize();
     catalogColor();
+    catalogOrder();
   });
 })(window.jQuery, window, document);
