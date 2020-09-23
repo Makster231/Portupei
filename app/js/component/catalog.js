@@ -72,7 +72,7 @@
       let img = $this
         .closest(".js_catalog_card")
         .find(".js_catalog_card-img")
-        .attr("src");
+        .attr("data-src");
 
       let cost_old = $this
         .closest(".js_catalog_card")
@@ -90,7 +90,7 @@
         });
       }
 
-      $(".js_popup_media-img")[0].setAttribute("src",img);
+      $(".js_popup_media-img")[0].setAttribute("data-src",img);
       $(".js_popup-cost p").html(
         "<strike>" + cost_old + "</strike> <strong>" + cost_new + "</strong>"
       );

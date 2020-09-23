@@ -16,11 +16,20 @@
     height: 100%;
   }
   &:after {
-    background: url(../../images/bg.png) 50% 10% no-repeat;
+    background: url(../../images/bg-m.png) 50% 10% no-repeat;
   }
   &:before {
-    background: url(../../images/entry/bg.png) 50% 0% no-repeat;
+    background: url(../../images/entry/bg-m.png) 50% 0% no-repeat;
     opacity: 0.55;
+  }
+
+  @media (min-width: 640px) {
+    &:after {
+      background: url(../../images/bg.png) 50% 10% no-repeat;
+    }
+    &:before {
+      background: url(../../images/entry/bg.png) 50% 0% no-repeat;
+    }
   }
 
   &_container {
@@ -30,8 +39,8 @@
     text-align: center;
     position: relative;
     z-index: 10;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     @media (min-width: 640px) {
       padding-top: 90px;
