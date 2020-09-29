@@ -50,8 +50,6 @@
     });
   }
 
-  
-
   function catalogOrder() {
     $(".js_card-order").click(function () {
       let $this = $(this);
@@ -72,7 +70,7 @@
       let img = $this
         .closest(".js_catalog_card")
         .find(".js_catalog_card-img")
-        .attr("data-src");
+        .attr("src");
 
       let cost_old = $this
         .closest(".js_catalog_card")
@@ -90,7 +88,7 @@
         });
       }
 
-      $(".js_popup_media-img")[0].setAttribute("data-src",img);
+      $(".js_popup_media-img")[0].setAttribute("src", img);
       $(".js_popup-cost p").html(
         "<strike>" + cost_old + "</strike> <strong>" + cost_new + "</strong>"
       );

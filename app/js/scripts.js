@@ -79,7 +79,7 @@ if ('objectFit' in document.documentElement.style === false) {
       var size = $this.closest(".js_catalog_card").find(".js_catalog_card-sizes li.js_active").text();
       var title = $this.closest(".js_catalog_card").find(".js_catalog_card-title").text();
       var color = $this.closest(".js_catalog_card").find(".js_catalog_card-colors li.js_active").length;
-      var img = $this.closest(".js_catalog_card").find(".js_catalog_card-img").attr("data-src");
+      var img = $this.closest(".js_catalog_card").find(".js_catalog_card-img").attr("src");
       var cost_old = $this.closest(".js_catalog_card").find(".js_catalog_card-costs strike").text();
       var cost_new = $this.closest(".js_catalog_card").find(".js_catalog_card-costs strong").text();
 
@@ -89,7 +89,7 @@ if ('objectFit' in document.documentElement.style === false) {
         });
       }
 
-      $(".js_popup_media-img")[0].setAttribute("data-src", img);
+      $(".js_popup_media-img")[0].setAttribute("src", img);
       $(".js_popup-cost p").html("<strike>" + cost_old + "</strike> <strong>" + cost_new + "</strong>");
       $(".js_popup-size li").text(size);
       $(".js_popup-title").text(title);
